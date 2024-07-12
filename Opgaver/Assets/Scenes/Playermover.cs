@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Playermover : MonoBehaviour
 {
-    public int hastighed = 5; 
+    public int hastighed = 5;
+    
     
     // Start is called before the first frame update
     void Start()
