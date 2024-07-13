@@ -10,12 +10,12 @@ public class CoinSpawner : MonoBehaviour
     public float zMin;
     public float zMax;
     private float leftovercooldown;
-    public float EnenmyCooldown = 10f;
+    public float EnemyCooldown = 10f;
 
     // Start is called before the first frame update
     void Start()
     {
-        leftovercooldown = EnenmyCooldown;
+        leftovercooldown = EnemyCooldown;
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class CoinSpawner : MonoBehaviour
             float zSpawn = Random.Range(zMin, zMax);    
             Vector3 SpawnPoint = new Vector3(xSpawn, transform.position.y, zSpawn);
             Instantiate(coinPrefab, SpawnPoint, Quaternion.identity);
-            leftovercooldown = EnenmyCooldown;
+            leftovercooldown = EnemyCooldown;
         }
     }
 }
