@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class Playermover : MonoBehaviour
 {
-    public float hastighed = 5f;
-    
+    public float speed = 10f;
+    private Rigidbody rb;
     
     // Start is called before the first frame update
     void Start()
     {
-        print("jeg har kaldt en gang");
-        print(hastighed);
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        print("jeg er kaldt meget");
+        Vector3 movement = rb.velocity;
+        movement.x = Input.GetAxisRaw("Horizontal") * speed;
+        movement.z = Input.GetAxisRaw("Vertical") * speed;
+        rb.velocity = movement;
     }
 }
