@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 5664024220896598813}
   - component: {fileID: 585912958483425544}
   - component: {fileID: 2626359973645343515}
-  - component: {fileID: 2733570356264878557}
   m_Layer: 0
   m_Name: Enemy 1
   m_TagString: Untagged
@@ -123,6 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 2626359973645343515}
+  animator: {fileID: 7829477290763713278}
 --- !u!54 &585912958483425544
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -172,27 +172,6 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!95 &2733570356264878557
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2659587662907161853}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ddfa9148de9a18e49918936250c70e2d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3806786866732621438
 GameObject:
   m_ObjectHideFlags: 0

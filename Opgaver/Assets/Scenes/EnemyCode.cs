@@ -9,7 +9,6 @@ public class EnemyCode : MonoBehaviour
     public NavMeshAgent agent;
 
     private GameObject player;
-    private Rigidbody rb;
     public Animator animator;
     
     // Start is called before the first frame update
@@ -22,9 +21,8 @@ public class EnemyCode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 movement = rb.velocity;
         agent.SetDestination(player.transform.position);
-        animator.SetFloat("Speed", rb.velocity.magnitude);
+        animator.SetFloat("Speed", agent.velocity.magnitude);
     }
 
     private void OnCollisionEnter(Collision other)
