@@ -27,7 +27,7 @@ public class CoinSpawner : MonoBehaviour
             float xSpawn = Random.Range(xMin, xMax);
             float zSpawn = Random.Range(zMin, zMax);    
             Vector3 SpawnPoint = new Vector3(xSpawn, transform.position.y, zSpawn);
-            Instantiate(coinPrefab, SpawnPoint, Quaternion.identity);
+            Instantiate(coinPrefab, SpawnPoint, Quaternion.Euler(90, 0, 0));
             leftovercooldown = EnemyCooldown;
         }
     }
