@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class Playermover : MonoBehaviour
     public float speed = 10f;
     private Rigidbody rb;
     public Animator animator;
+    public GameObject gameOverScreen;
     
     // Start is called before the first frame update
     void Start()
@@ -24,4 +26,11 @@ public class Playermover : MonoBehaviour
         
         animator.SetFloat("Speed", rb.velocity.magnitude);
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.CompareTag("Enemy"))
+            gameOverScreen.SetActive(true);
+    }
 }
+
