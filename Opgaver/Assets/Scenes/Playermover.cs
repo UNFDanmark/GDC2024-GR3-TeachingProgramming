@@ -6,6 +6,7 @@ public class Playermover : MonoBehaviour
 {
     public float speed = 10f;
     private Rigidbody rb;
+    public Animator animator;
     
     // Start is called before the first frame update
     void Start()
@@ -20,5 +21,7 @@ public class Playermover : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal") * speed;
         movement.z = Input.GetAxisRaw("Vertical") * speed;
         rb.velocity = movement;
+        
+        animator.SetFloat("Speed", rb.velocity.magnitude);
     }
 }

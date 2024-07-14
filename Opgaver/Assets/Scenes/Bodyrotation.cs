@@ -11,11 +11,13 @@ public class Bodyrotation : MonoBehaviour
 
     private float remainingCooldown;
     public float BulletSpeed = 5f;
+    public Animator animator;
+    public AudioSource audioSource;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,6 +32,8 @@ public class Bodyrotation : MonoBehaviour
             Rigidbody bulletRB = bullet.GetComponent<Rigidbody>();
             bulletRB.velocity = transform.forward * BulletSpeed;
             remainingCooldown = CooldownTime;
+            animator.SetTrigger("Shoot");
+            audioSource.Play();
         }
     }
 }
