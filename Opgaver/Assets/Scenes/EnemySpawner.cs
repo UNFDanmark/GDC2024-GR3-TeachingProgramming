@@ -10,7 +10,7 @@ public class EnemySpawner : MonoBehaviour
     public float zMin;
     public float zMax;
     private float leftovercooldown;
-    public float EnenmyCooldown = 10f;
+    public float EnemyCooldown = 10f;
 
     // Start is called before the first frame update
     void Start()
